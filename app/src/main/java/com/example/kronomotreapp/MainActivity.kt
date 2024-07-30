@@ -8,12 +8,32 @@ import com.example.kronomotreapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
+    private var timePause: Long = 0
+    private var isRunning: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var timePause: Long = 0
+        if (savedInstanceState != null) {
+            timePause = savedInstanceState.getLong("timePause")
+            isRunning = savedInstanceState.getBoolean("isRunning")
+            binding.kronometre.base = savedInstanceState.getLong("kronometreBase")
+            //daha önce kaydedilen veriyi geri yüklenmesini sağlıyor.
+
+            if (isRunning) {
+                binding.kronometre.start()
+                binding.startButton.visibility = View.GONE
+                binding.pauseButton.visibility = View.VISIBLE
+                binding.start.setImageDrawable(getDrawable(R.drawable.pause))
+            } else {
+                binding.kronometre.stop()
+                binding.startButton.visibility = View.VISIBLE
+                binding.pauseButton.visibility = View.GONE
+                binding.start.setImageDrawable(getDrawable(R.drawable.start))
+            }
+        }
 
         binding.startButton.setOnClickListener {
             binding.kronometre.base = SystemClock.elapsedRealtime() + timePause
@@ -21,7 +41,6 @@ class MainActivity : AppCompatActivity() {
             binding.startButton.visibility = View.GONE
             binding.pauseButton.visibility = View.VISIBLE
             binding.start.setImageDrawable(getDrawable(R.drawable.pause))
-
         }
 
         binding.pauseButton.setOnClickListener {
@@ -41,4 +60,15 @@ class MainActivity : AppCompatActivity() {
             binding.start.setImageDrawable(getDrawable(R.drawable.start))
         }
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        //verinin kaybolmaması için kaydeden kısım
+        super.onSaveInstanceState(outState)
+        outState.putLong("timePause", timePause)
+        outState.putBoolean("isRunning", isRunning)
+        outState.putLong("kronometreBase", binding.kronometre.base)
+        //kaydedilecek diğer ifadeler ve durumlar buraya yazılmalı.
+    }
+
+
 }
