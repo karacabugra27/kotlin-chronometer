@@ -46,36 +46,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/kronometreButton" />
 
+
     <TextView
         android:id="@+id/hosgeldinTextView"
         android:layout_width="335dp"
         android:layout_height="90dp"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="55dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="24dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Welcome !\nWhat do you want  to do?"
-        android:textAlignment="viewStart"
+        android:text="ChronoCount"
+        android:textAlignment="center"
         android:textColor="@color/darker_black"
-        android:textSize="30sp"
+        android:textSize="50sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/kronometreButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageStopWatch"
-        app:layout_constraintVertical_bias="1.0" />
-
+        app:layout_constraintTop_toBottomOf="@+id/imageStopWatch" />
 
     <ImageView
         android:id="@+id/imageStopWatch"
         android:layout_width="228dp"
         android:layout_height="192dp"
         android:layout_marginStart="110dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="110dp"
         app:layout_constraintBottom_toTopOf="@id/hosgeldinTextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48000002"
         app:srcCompat="@drawable/shortcut" />
 </androidx.constraintlayout.widget.ConstraintLayout>

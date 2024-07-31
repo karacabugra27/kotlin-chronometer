@@ -8,4 +8,145 @@
     android:background="@color/black"
     tools:context=".SayacActivity">
 
+
+    <Button
+        android:id="@+id/buttonAYT"
+        android:layout_width="56dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="24dp"
+        android:text="AYT"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="17sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonTYT"
+        app:layout_constraintTop_toBottomOf="@+id/start"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/dakika"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="dakika"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="25sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/saat"
+        app:layout_constraintTop_toBottomOf="@+id/sayacSayim" />
+
+    <EditText
+        android:id="@+id/saat"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="saat"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="25sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/start"
+        app:layout_constraintEnd_toStartOf="@+id/dakika"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sayacSayim" />
+
+    <TextView
+        android:id="@+id/sayacSayim"
+        android:layout_width="294dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="59dp"
+        android:text="00:00:00"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="75sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/start"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sayacSayim"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/start" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="185dp"
+        android:layout_height="112dp"
+        android:background="@drawable/buton_arkaplan"
+        android:text="START"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="43sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/start"
+        app:layout_constraintEnd_toEndOf="@+id/start"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toTopOf="@+id/start" />
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="185dp"
+        android:layout_height="112dp"
+        android:background="@drawable/buton_arkaplan"
+        android:text="STOP"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="43sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/start"
+        app:layout_constraintEnd_toEndOf="@+id/start"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toTopOf="@+id/start" />
+
+    <Button
+        android:id="@+id/buttonTYT"
+        android:layout_width="56dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="24dp"
+        android:text="TYT"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="17sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAYT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start"
+        app:layout_constraintVertical_bias="0.978" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

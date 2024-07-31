@@ -47,7 +47,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/start"
         app:layout_constraintTop_toBottomOf="@+id/start"
-        app:layout_constraintVertical_bias="0.373"
+        app:layout_constraintVertical_bias="0.233"
         app:srcCompat="@drawable/reset" />
 
     <Button
