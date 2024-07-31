@@ -13,33 +13,51 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="100dp"
-        android:layout_marginBottom="136dp"
-        android:text="CHRONOMETER"
-        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:text="CHRONOMETER\nCOUNTDOWN TIMER"
+        android:textAlignment="center"
         android:textColor="@color/darker_black"
         android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/blend"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/blend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="187dp"
+        android:layout_marginEnd="188dp"
+        android:text="bgrkrc"
+        android:fontFamily="monospace"
+        android:textColor="@color/darker_black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="100dp"
         android:layout_marginEnd="100dp"
-        android:text="Last Update Date\n30.07.2024\nVersion 1.2"
-        android:textSize="20sp"
-        android:textColor="@color/gray"
+        android:layout_marginBottom="150dp"
+        android:text="Last Update Date\n31.07.2024\nVersion 1.3"
         android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/blend" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,24 +1,19 @@
 package com.example.kronomotreapp
 
-import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.kronomotreapp.databinding.ActivityMainBinding
+import com.example.kronomotreapp.databinding.ActivitySayacBinding
 
-class SplashActivity : AppCompatActivity() {
-    val splashDuration: Long = 2700
-
+class SayacActivity : AppCompatActivity() {
+    lateinit var binding: ActivitySayacBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        binding = ActivitySayacBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        Handler().postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-        }, splashDuration)
     }
-
 }
