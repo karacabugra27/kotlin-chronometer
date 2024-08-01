@@ -93,6 +93,8 @@ class SayacActivity : AppCompatActivity() {
             override fun onFinish() {
                 binding.sayacSayim.text = "00:00:00"
                 isRunning = false
+                binding.saat.text.clear()
+                binding.dakika.text.clear()
                 binding.saat.visibility = View.VISIBLE
                 binding.dakika.visibility = View.VISIBLE
                 binding.startButton.visibility = View.VISIBLE
